@@ -1,0 +1,9 @@
+// 1- Chargement du driver
+Class.forName("com.mysql.cj.jdbc.Driver");
+
+// 2- Connexion à la BD
+Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/iage_ism_2024","root", "");
+
+String sql= String.format("INSERT INTO `client` (`nom_client`, `prenom`, `tel_client`)" 
+          + "VALUES ('%s', '%s', '%s')", 
+      client.getNom(), client.getPrenom(), client.getTelephone());
